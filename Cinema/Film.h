@@ -30,8 +30,8 @@ public:
 	double getRating();
 	double getTicketCost( );
 
-	void  write(Film entity);
-	DatabaseEntity  read();
+	void  write(string fileName);
+	DatabaseEntity  read(string fileName);
 
 	friend  ostream &operator<< (ostream &stream, Film film);
 	friend  istream &operator>> (istream &stream, Film &film);

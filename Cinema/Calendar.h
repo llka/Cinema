@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "DatabaseEntity.h"
 #include <string>
 #include <iostream>
@@ -16,8 +17,8 @@ class Calendar:
 private:
 
 public:
-	void write(Calendar entity);
-	DatabaseEntity read();
+	void write( string fileName);
+	DatabaseEntity read(string fileName);
 
 	Calendar( );
 	~Calendar( );

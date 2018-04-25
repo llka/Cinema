@@ -24,8 +24,8 @@ public:
 	string getTitle( );
 	int getPlacesCount( );
 
-	void  write(Cinema entity);
-	DatabaseEntity  read();
+	void  write(string fileName);
+	DatabaseEntity  read(string fileName);
 
 	friend  ostream &operator<< (ostream &stream, Cinema cinema);
 	friend  istream &operator>> (istream &stream, Cinema &cinema);

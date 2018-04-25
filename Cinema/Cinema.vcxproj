@@ -149,11 +149,16 @@
   <ItemGroup>
     <ClInclude Include="Calendar.h" />
     <ClInclude Include="Cinema.h" />
+    <ClInclude Include="CinemaDao.h" />
+    <ClInclude Include="CrudRepository.h" />
     <ClInclude Include="DatabaseEntity.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Film.h" />
+    <ClInclude Include="FilmDao.h" />
+    <ClInclude Include="FilmLogic.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Schedule.h" />
+    <ClInclude Include="ScheduleDao.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Time.h" />
@@ -161,11 +166,16 @@
   <ItemGroup>
     <ClCompile Include="Calendar.cpp" />
     <ClCompile Include="Cinema.cpp" />
+    <ClCompile Include="CinemaDao.cpp" />
+    <ClCompile Include="CrudRepository.cpp" />
     <ClCompile Include="DatabaseEntity.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Demo.cpp" />
     <ClCompile Include="Film.cpp" />
+    <ClCompile Include="FilmDao.cpp" />
+    <ClCompile Include="FilmLogic.cpp" />
     <ClCompile Include="Schedule.cpp" />
+    <ClCompile Include="ScheduleDao.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

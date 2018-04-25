@@ -1,6 +1,13 @@
 #include "stdafx.h"
 #include "Schedule.h"
+#include <string>
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <map>
+#include <algorithm>
+#include <vector>
+#include <list>
 
 using namespace std;
 
@@ -24,9 +31,20 @@ Schedule::Schedule(Schedule * schedule) {
 
 Schedule::~Schedule( ) {}
 
-void Schedule::write(Schedule entity) {}
+void Schedule::write( string fileName) {
+	ofstream fout(fileName, ios::app);
+	fout << " , " << date.day << " , " << date.month <<
+		" , " << date.year << " , " << time.hour << " , " << time.minutes
+		<< " , " << cinemaId << " , " << filmId
+		<< " , " << availablePlacesCount << "." << endl;
+}
 
-DatabaseEntity Schedule::read() {
+DatabaseEntity Schedule::read(string fileName) {
+	ifstream fin(fileName);
+	Schedule shedule;
+	fin >> shedule.date.day >> shedule.date.month >> shedule.date.year >> shedule.time.hour >> shedule.time.minutes
+		>> shedule.cinemaId >> shedule.filmId
+		>> shedule.availablePlacesCount;
 	return DatabaseEntity( );
 }
 

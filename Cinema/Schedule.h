@@ -27,8 +27,8 @@ public:
 	Schedule(Schedule *schedule);
 	~Schedule( );
 
-	void  write(Schedule entity);
-	DatabaseEntity  read();
+	void  write(string fileName);
+	DatabaseEntity  read(string fileName);
 
 	friend  ostream &operator<< (ostream &stream, Schedule shedule);
 	friend  istream &operator>> (istream &stream, Schedule &shedule);

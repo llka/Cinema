@@ -28,6 +28,12 @@
     <Filter Include="DataBase">
       <UniqueIdentifier>{93a9afca-8a94-4023-b347-6fdd65497f5f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\dao">
+      <UniqueIdentifier>{c13de383-9fe4-463f-9292-fe8219957057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\dao">
+      <UniqueIdentifier>{c2c6cdd3-9a20-4c3f-90f4-cd926cb58776}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -60,6 +66,21 @@
     <ClInclude Include="Film.h">
       <Filter>Файлы заголовков\entity</Filter>
     </ClInclude>
+    <ClInclude Include="FilmLogic.h">
+      <Filter>Файлы заголовков\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="CrudRepository.h">
+      <Filter>Файлы заголовков\dao</Filter>
+    </ClInclude>
+    <ClInclude Include="FilmDao.h">
+      <Filter>Файлы заголовков\dao</Filter>
+    </ClInclude>
+    <ClInclude Include="CinemaDao.h">
+      <Filter>Файлы заголовков\dao</Filter>
+    </ClInclude>
+    <ClInclude Include="ScheduleDao.h">
+      <Filter>Файлы заголовков\dao</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -88,6 +109,21 @@
     </ClCompile>
     <ClCompile Include="Demo.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FilmLogic.cpp">
+      <Filter>Исходные файлы\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="CrudRepository.cpp">
+      <Filter>Исходные файлы\dao</Filter>
+    </ClCompile>
+    <ClCompile Include="FilmDao.cpp">
+      <Filter>Исходные файлы\dao</Filter>
+    </ClCompile>
+    <ClCompile Include="CinemaDao.cpp">
+      <Filter>Исходные файлы\dao</Filter>
+    </ClCompile>
+    <ClCompile Include="ScheduleDao.cpp">
+      <Filter>Исходные файлы\dao</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

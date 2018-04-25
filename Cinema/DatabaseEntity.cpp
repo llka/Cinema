@@ -1,10 +1,14 @@
 #include "stdafx.h"
 #include "DatabaseEntity.h"
+#include <string>
+
+using namespace std;
 
 
-void DatabaseEntity::write(DatabaseEntity entity) {}
+void DatabaseEntity::write(string fileName) {
+}
 
-DatabaseEntity DatabaseEntity::read() {
+DatabaseEntity DatabaseEntity::read(string fileName) {
 	return DatabaseEntity( );
 }
 

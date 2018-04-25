@@ -1,8 +1,15 @@
 #pragma once
+#include "stdafx.h"
+#include <string>
+
+using namespace std;
+
 class DatabaseEntity {
 public:
-	void virtual write(DatabaseEntity entity);
-	DatabaseEntity virtual read();
+	/*write object in file*/
+	void virtual write(string fileName);
+	DatabaseEntity virtual read(string fileName);
+
 	DatabaseEntity( );
 	~DatabaseEntity( );
 };

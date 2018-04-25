@@ -1,6 +1,13 @@
 #include "stdafx.h"
 #include "Film.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>   
+#include <string>
+#include <map>
+#include <algorithm>
+#include <vector>
+#include <list>
 
 using namespace std;
 
@@ -62,14 +69,35 @@ double Film::getTicketCost( ) {
 	return ticketCost;
 }
 
-void Film::write(Film entity) {}
+void Film::write(string fileName) {
+	ofstream fout(fileName, ios::app);
+	char delimiter = '_';
+	fout << filmId << delimiter << title << delimiter << description << delimiter << rating << delimiter << ticketCost << endl;
+}
 
-DatabaseEntity Film::read() {
-	return DatabaseEntity( );
+DatabaseEntity Film::read(string fileName) {
+	char delimiter = '_';
+
+	ifstream fin(fileName);
+	Film film;
+
+	for (string line; getline(fin, line); )
+	{
+		cout << "filmLine = " << line << endl;
+		istringstream iss(line);
+		string element;
+		vector<string> elements;
+		while (getline(iss, element, delimiter))
+		{
+			elements.push_back(element);
+			cout << "element " << element << endl;
+		}
+	}
+	return film;
 }
 
 ostream & operator<<(ostream & stream, Film film) {
-	stream << "Film{ id=" << film.filmId << ", title=" << film.title << ", rating=" << film.rating <<", description=" << film.description << ", ticket costs " << film.ticketCost << "}" << endl;
+	stream << "Film{ id=" << film.filmId << ", title=" << film.title << ", description=" << film.description << ", rating=" << film.rating << ", ticket costs " << film.ticketCost << "$}" << endl;
 	return stream;
 }
 

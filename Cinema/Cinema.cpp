@@ -13,11 +13,6 @@
 
 using namespace std;
 
-//string FILE_CINEMA = "cinema.txt";
-
-//ifstream fin(FILE_CINEMA);
-//ofstream fout(FILE_CINEMA);
-
 Cinema::Cinema( ) {}
 
 Cinema::Cinema(int id, string title1, int places) {
@@ -58,13 +53,15 @@ int Cinema::getPlacesCount( ) {
 	return placesCount;
 }
 
-void Cinema::write(Cinema cinema) {
-	//fout << " " << cinema.cinemaId << " " << cinema.title << " " << cinema.placesCount << endl;
+void Cinema::write(string fileName) {
+	ofstream fout(fileName, ios::app);
+	fout << " , " << cinemaId << " , " << title << " , " << placesCount << " . "<< endl;
 }
 
-DatabaseEntity Cinema::read() {
+DatabaseEntity Cinema::read(string fileName) {
+	ifstream fin(fileName);
 	Cinema cinema;
-	//fin >> cinema.cinemaId >> cinema.title >> cinema.placesCount;
+	fin >> cinema.cinemaId >> cinema.title >> cinema.placesCount;
 	return cinema;
 }
 
