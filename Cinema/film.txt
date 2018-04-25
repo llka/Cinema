@@ -1,0 +1,3 @@
+Film{ id=1, title=title, rating=7, description=wqeqwew, ticket costs 10}
+Film{id=2, title=2, rating=2, description=2, ticket costs 2}
+Film{id=3, title=3, rating=3, description=3, ticket costs 2}

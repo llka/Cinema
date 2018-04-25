@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\entity">
+      <UniqueIdentifier>{93c36225-3cf6-44d8-b0a1-baed0c2ff575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\logic">
+      <UniqueIdentifier>{8c5b0709-6b8b-4cd2-b868-db04bed0c1ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\entity">
+      <UniqueIdentifier>{b4b4dcd1-f396-4b77-962c-efe540d0b79a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\logic">
+      <UniqueIdentifier>{99034b60-9b8d-45c3-9d67-662ab0dc51bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase">
+      <UniqueIdentifier>{93a9afca-8a94-4023-b347-6fdd65497f5f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,13 +36,74 @@
     <ClInclude Include="targetver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendar.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Cinema.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseEntity.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Schedule.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Film.h">
+      <Filter>Файлы заголовков\entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Calendar.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Cinema.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseEntity.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Schedule.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Film.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
     <ClCompile Include="Demo.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Cinema.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cinema.txt">
+      <Filter>DataBase</Filter>
+    </Text>
+    <Text Include="film.txt">
+      <Filter>DataBase</Filter>
+    </Text>
+    <Text Include="schedule.txt">
+      <Filter>DataBase</Filter>
+    </Text>
   </ItemGroup>
 </Project>
