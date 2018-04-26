@@ -44,7 +44,9 @@ vector<Cinema> CinemaDao::getAll()
 			}
 			i++;
 		}
-		cinemas.push_back(cinema);
+		if (cinema.getCinemaId() > -1) {
+			cinemas.push_back(cinema);
+		}
 	}
 	return cinemas;
 }

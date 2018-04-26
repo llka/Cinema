@@ -16,6 +16,7 @@ using namespace std;
 class Schedule:
 	public DatabaseEntity {
 public:
+	int scheduleId;
 	Date date;
 	Time time;
 	int cinemaId;
@@ -23,7 +24,7 @@ public:
 	int availablePlacesCount;
 
 	Schedule( );
-	Schedule(Date date1, Time time1, int cinemaId1, int filmId1, int availablePlacesCount1);
+	Schedule(int scheduleId, Date date1, Time time1, int cinemaId1, int filmId1, int availablePlacesCount1);
 	Schedule(Schedule *schedule);
 	~Schedule( );
 

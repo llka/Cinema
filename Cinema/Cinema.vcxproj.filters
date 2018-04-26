@@ -81,6 +81,12 @@
     <ClInclude Include="ScheduleDao.h">
       <Filter>Файлы заголовков\dao</Filter>
     </ClInclude>
+    <ClInclude Include="CinemaLogic.h">
+      <Filter>Файлы заголовков\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="ScheduleLogic.h">
+      <Filter>Файлы заголовков\logic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -124,6 +130,12 @@
     </ClCompile>
     <ClCompile Include="ScheduleDao.cpp">
       <Filter>Исходные файлы\dao</Filter>
+    </ClCompile>
+    <ClCompile Include="CinemaLogic.cpp">
+      <Filter>Исходные файлы\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="ScheduleLogic.cpp">
+      <Filter>Исходные файлы\logic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

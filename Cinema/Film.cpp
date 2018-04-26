@@ -13,10 +13,13 @@ using namespace std;
 
 Film::Film( ) {}
 
-Film::Film(int filmId1, string title1, string description1, double rating1, double ticketCost1) {
+Film::Film(int filmId1, string title1, string description1, int year1, string country1, int duration, double rating1, double ticketCost1) {
 	filmId = filmId1;
 	title = title1;
 	description = description1;
+	year = year1;
+	country = country1;
+	durationInMinutes = duration;
 	rating = rating1;
 	ticketCost = ticketCost1;
 }
@@ -24,6 +27,9 @@ Film::Film(Film * film) {
 	filmId = film->filmId;
 	title = film->title;
 	description = film->description;
+	year = film->year;
+	country = film->country;
+	durationInMinutes = film->durationInMinutes;
 	rating = film->rating;
 	ticketCost = film->ticketCost;
 }
@@ -49,6 +55,21 @@ void Film::setTicketCost(double ticketCost1) {
 	ticketCost = ticketCost1;
 }
 
+void Film::setYear(int year1)
+{
+	year = year1;
+}
+
+void Film::setCountry(string country1)
+{
+	country = country1;
+}
+
+void Film::setDurationInMinutes(int minutes)
+{
+	durationInMinutes = minutes;
+}
+
 int Film::getFilmId( ) {
 	return filmId;
 }
@@ -67,6 +88,21 @@ double Film::getRating( ) {
 
 double Film::getTicketCost( ) {
 	return ticketCost;
+}
+
+int Film::getYear()
+{
+	return year;
+}
+
+string Film::getCountry()
+{
+	return country;
+}
+
+int Film::getDurationInMinutes()
+{
+	return durationInMinutes;
 }
 
 void Film::write(string fileName) {
@@ -97,7 +133,7 @@ DatabaseEntity Film::read(string fileName) {
 }
 
 ostream & operator<<(ostream & stream, Film film) {
-	stream << "Film{ id=" << film.filmId << ", title=" << film.title << ", description=" << film.description << ", rating=" << film.rating << ", ticket costs " << film.ticketCost << "$}" << endl;
+	stream << "Film{ id=" << film.filmId << ", title=" << film.title << ", genre=" << film.description << ", year=" << film.year <<", country=" << film.country << ", duration="<<film.durationInMinutes <<" min , rating=" << film.rating << ", ticket costs " << film.ticketCost << "$}" << endl;
 	return stream;
 }
 
@@ -109,6 +145,12 @@ istream & operator>>(istream & stream, Film & film) {
 	stream >> film.title;
 	cout << "description:" << endl;
 	stream >> film.description;
+	cout << "year:" << endl;
+	stream >> film.year;
+	cout << "country:" << endl;
+	stream >> film.country;
+	cout << "duration:" << endl;
+	stream >> film.durationInMinutes;
 	cout << "rating:" << endl;
 	stream >> film.rating;
 	cout << "ticket cost:" << endl;

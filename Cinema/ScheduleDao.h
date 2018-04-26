@@ -17,6 +17,7 @@ using namespace std;
 
 class ScheduleDao {
 public:
+	int scheduleIdAutoIncrement;
 	char DELIMITER = '_';
 	string FILE = "schedule.txt";
 public:

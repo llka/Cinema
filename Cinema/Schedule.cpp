@@ -13,7 +13,8 @@ using namespace std;
 
 Schedule::Schedule( ) {}
 
-Schedule::Schedule(Date date1, Time time1, int cinemaId1, int filmId1, int availablePlacesCount1) {
+Schedule::Schedule(int id, Date date1, Time time1, int cinemaId1, int filmId1, int availablePlacesCount1) {
+	scheduleId = id;
 	date = date1;
 	time = time1;
 	cinemaId = cinemaId1;
@@ -22,6 +23,7 @@ Schedule::Schedule(Date date1, Time time1, int cinemaId1, int filmId1, int avail
 }
 
 Schedule::Schedule(Schedule * schedule) {
+	scheduleId = schedule->scheduleId;
 	date = schedule->date;
 	time = schedule->time;
 	cinemaId = schedule->cinemaId;
@@ -49,8 +51,16 @@ DatabaseEntity Schedule::read(string fileName) {
 }
 
 ostream & operator<<(ostream & stream, Schedule shedule) {
+	string hh = to_string(shedule.time.hour);
+	string mm = to_string(shedule.time.minutes);
+	if (shedule.time.minutes == 0) {
+		mm = "00";
+	}
+	if (shedule.time.hour == 0) {
+		hh = "00";
+	}
 	stream << "Schedule{ date=" << shedule.date.day << "." << shedule.date.month <<
-		"." << shedule.date.year << ", time=" << shedule.time.hour << ":" << shedule.time.minutes
+		"." << shedule.date.year << ", time=" << hh << ":" << mm
 		<< ", cinemaId=" << shedule.cinemaId << ", filmId=" << shedule.filmId
 		<< ", tickets available= " << shedule.availablePlacesCount << "}" << endl;
 	return stream;
@@ -64,13 +74,13 @@ istream & operator>>(istream & stream, Schedule & shedule) {
 	stream >>  shedule.date.month;
 	cout << "year :" << endl;
 	stream >> shedule.date.year;
-	cout << "hours :" << endl;
+	cout << "hour :" << endl;
 	stream >> shedule.time.hour;
 	cout << "minutes :" << endl;
 	stream >> shedule.time.minutes;
-	cout << "cinemaId :" << endl;
+	cout << "cinema Id :" << endl;
 	stream >> shedule.cinemaId;
-	cout << "filmId :" << endl;
+	cout << "film Id :" << endl;
 	stream >> shedule.filmId;
 	cout << "availablePlacesCount :" << endl;
 	stream >> shedule.availablePlacesCount;

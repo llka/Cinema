@@ -25,10 +25,10 @@ vector<Film> FilmDao::getAll()
 		Film film;
 		istringstream iss(line);
 		string element;
-		int i = 0;
+		int argumentPlace = 0;
 		while (getline(iss, element, DELIMITER))
 		{
-			switch (i)
+			switch (argumentPlace)
 			{
 			case 0:
 				film.setFilmId(stoi(element));
@@ -40,17 +40,28 @@ vector<Film> FilmDao::getAll()
 				film.setDescription(element);
 				break;
 			case 3:
-				film.setRating(stod(element, &sz));
+				film.setYear(stoi(element));
 				break;
 			case 4:
+				film.setCountry(element);
+				break;
+			case 5:
+				film.setDurationInMinutes(stoi(element));
+				break;
+			case 6:
+				film.setRating(stod(element, &sz));
+				break;
+			case 7:
 				film.setTicketCost(stod(element, &sz));
 				break;
 			default:
 				break;
 			}
-			i++;
+			argumentPlace++;
 		}
-		films.push_back(film);
+		if (film.getFilmId() > -1) {
+			films.push_back(film);
+		}
 	}
 	return films;
 }
@@ -64,7 +75,7 @@ Film FilmDao::getById(int id)
 			return allFilms[i];
 		}
 	}
-	Film film = Film(-1, "[ERROR]", "[ERROR]", -1, -1);
+	Film film = Film(-1, "[ERROR]", "[ERROR]", -1, "[ERROR]", -1, -1, -1);
 	cout << "[ERROR] No film with id = " << id << "!" << endl;
 	return film;
 }
