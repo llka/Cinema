@@ -69,6 +69,10 @@ void CinemaDao::create(Cinema entity)
 {
 	ofstream fout(FILE, ios::app);
 	fout << endl;
+	if(getAll().size() < 1){
+		fout << CinemaId << DELIMITER << Title<< DELIMITER << PlacesCount;
+		fout << endl;
+	}
 	fout << entity.getCinemaId() << DELIMITER << entity.getTitle() << DELIMITER << entity .getPlacesCount();
 }
 
